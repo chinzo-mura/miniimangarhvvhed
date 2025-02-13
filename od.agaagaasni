@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Хайрын Захидал</title>
+    <style>
+        body {
+            background-color: #ffe4e1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 100px;
+            overflow: hidden;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+        }
+        input, button {
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .love-letter {
+            display: none;
+            margin-top: 20px;
+            padding: 20px;
+            background: pink;
+            border-radius: 10px;
+            z-index: 10;
+
+        }
+        .heart {
+            position: absolute;
+            top: 0;
+            color: red;
+            font-size: 24px;
+            animation: fall linear infinite;
+            z-index: 100;
+        }
+
+        /* Зүрх унах хөдөлгөөн */
+        @keyframes fall {
+            0% { transform: translateY(-10vh); opacity: 1; }
+            100% { transform: translateY(100vh); opacity: 0; }
+        }
+        /* 768px-с бага дэлгэц (гар утас, таблет) */
+@media (max-width: 768px) {
+    .container {
+        width: 80vw; /* Хайрцгийн өргөнийг багасгах */
+        max-width: 300px;
+        
+    }
+        .message {
+        font-size: 16px; /* Утасны дэлгэцэнд текст том харагдахгүй байхаар */
+    }
+
+    .heart {
+        font-size: 15px; /* Унах зүрхний хэмжээг багасгах */
+    }
+    input, button {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 20px;
+}   
+}
+
+/* 480px-с бага дэлгэц (жижиг гар утас) */
+@media (max-width: 480px) {
+    .container {
+        width: 90vw;
+        max-width: 280px;
+    }
+
+    .message {
+        font-size: 14px;
+        padding: 15px;
+    }
+
+    .heart {
+        font-size: 12px;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="asuult">
+        <h2>✨ Хайрын захидлыг онгойлгоорой! ✨</h2>
+        <p>Нууц үгээ оруулна уу:Та хэдэн настай вэ ?</p>
+        <input type="text" id="password" placeholder="Нууц үг...">
+        <button onclick="checkPassword()">Нээх</button>
+        <p id="message" style="color: red;"></p>
+        </div>
+        <div class="love-letter" id="loveLetter">
+            <h3>💖 ene odriin mend minii mangar hvvhdee  💖</h3>
+            <p>💕Zondoo ih yum yrdag bolhoor bichih yum oldohvi zondoo udaan bodloo. taniig anh chamaig awj suun gehed hudlaa toglood baina gej vnheer bodoj baisan bolhoor oilgoogvi neleenl udsan baihlda ter vyd taniig yu bodoj baisan boldoo gej dandaa boddogoo. &#x1F46E;&#x200D;&#x1F9B2; mongold ochood  yg yhaa medehgvi ewgvi baisan ch gesen anh garaas ni atgaad ergelzee tailagdsaan.&#x1F979; <br>
+                Odoo bol bi taniig awch suunaa.&#x1F61D;	&#x1F618; Ene jil boginhon hugtsaand hamt baisan  ch gesen hezee negen tsagt odor bolgon hamt baih baiha.&#x1F972; &#x1F618;&#x1F61A;Tanii zahiand hariu ogoogvi unshaad yu gej hezee helhee medeegvi yumaa gehdee odoo hariun oilgomjtoi l bolson baihlda	&#x1F9D0; gehdee yhue ter vyd heleh vgee odool heliidaa&#x1F60E; bi bas galzuurch baiga baihoo taniig anh usguugiin mashind suuhad yu gej helnee yh ystoi yum bolnoo gej bodood icheed taniluu harj chadaagvi aimar baisaan.&#x1F614;
+                gehdee bi medehgvi vnheer anzarahgvi baij baigad taniig deer anh oroi zalgaad yrij baihad ygaad nadruu zalgsan yum bol ygaad bainga tegej heleed baiga yum bol gedgiihee harig awsan neeh aimar yum yriagvich gesen ter vyd anh oilgson baihaa yhu bas magadgvi gej boddog baisan ch gesen hudlaa baih gej oortoo itgvvleed jil gargvi ywsan bainlee . hudlaa zondoo oilgoogvi yum shig tenegeseen. bi ch gesen taniig naizaa gej harj chadahgvi baiha.&#x1F917; vneniig helhed anh taniig crushldag baisan ldaa &#x1F92D;anh hamt bvjigleh vyd crush l sanbaiha&#x1F92B.bi odoo ongontsoonoo buugaad yu gej bichhee medehgvi l baina. vvrd gej helj chadhgvi ch gesen chadah hvrtlee tanii hajuud baih bolnoo.&#x1F63B;&#x1F63B;
+                &#x1F60E;jo odoonoos yg odoogiin bi yu helmeer baina we gewel ta bitii owdood bailda &#x1F614; bi taiwan baij boloh ch gesen zondool sanaa jowj yu hiij baiga bol gej hartai hvnees ih boddog yum za&#x1F97A;. bi yr ni neleed hartai hvn shvv&#x1F608;&#x1F608;. gehdee tand itgej baigal bolhoor zvgeer l baigalda. utsan genet tasarhad ysiin bol yu bolchuu utsaa aldtsan yum baihda geed zondoo bodog baiga shv.&#x1FAF6;&#x1FAF6; tanii taldeer neeh taiwan baigad baiga yum bol baihgvi baidag baiga shv.	&#x1F445; Valentine aar hamt baij chadhgvi neleed heden jil boloh baihlda gehdee hamt baimaar l baina. odoo bol bi itgeltei helh baiha bi tand hairtai bolson yum shig baino. bitii owdoj hvnii sanaa zowoogooroi ta min. eniig bicheed suuj baihad ch gesen ta ymar od agaa weel ged chat bichsen baina  bi od bish shvv ta l harin od jo. za solongost ochison bolhoor ydraj owdohgvi hicheegeere bi tanii ard vrgel baiha bolnoo. 💕</p>
+        </div>
+    </div>
+
+    <script>
+        function checkPassword() {
+            var input = document.getElementById("password").value;
+            var message = document.getElementById("message");
+            var letter = document.getElementById("loveLetter");
+
+            if (input.toLowerCase() === "21") { 
+                letter.style.display = "block";
+                document.getElementById("asuult").style.display = "none";
+                message.textContent = "";
+                startHearts(); // Зүрх унагаах функц дуудна
+            } else {
+                message.textContent = "😢 Өө, буруу байна! Дахин оролдоорой!";
+                letter.style.display = "none";
+            }
+        }
+
+        function startHearts() {
+            setInterval(() => {
+                let heart = document.createElement("div");
+                heart.innerHTML = "❤️";
+                heart.classList.add("heart");
+                
+                // Санамсаргүй байрлал, хэмжээ, уналтын хурд өгнө
+                heart.style.left = Math.random() * window.innerWidth + "px";
+                heart.style.fontSize = Math.random() * 20 + 10 + "px";
+                heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+                
+                document.body.appendChild(heart);
+
+                // Зүрх доош унасны дараа устгана
+                setTimeout(() => {
+                    heart.remove();
+                }, 5000);
+            }, 300);
+        }
+    </script>
+
+</body>
+</html>
